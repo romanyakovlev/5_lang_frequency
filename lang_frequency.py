@@ -1,12 +1,18 @@
 
 
 def load_data(filepath):
-    pass
-
+    file = open(filepath, 'r')
+    return file.read()
 
 def get_most_frequent_words(text):
-    pass
-
+    text = ' '.join(text.split('\n')).split(' ')
+    arr = sorted([x for x in list(set(text)) if x != ''])
+    mx = max(text.count(x) for x in arr)
+    for x in arr:
+        if text.count(x) == mx:
+            return x
+            break
 
 if __name__ == '__main__':
-    pass
+    text = load_data('1.txt')
+    print(get_most_frequent_words(text))

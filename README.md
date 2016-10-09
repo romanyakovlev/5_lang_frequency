@@ -13,4 +13,4 @@ git clone https://github.com/romanyakovlev/5_lang_frequency.git
 ```sh
 python3 bars.py lang_frequency.py filename
 ```
-где filename - это название созданного вами файла.
+где filename - это параметр, задающий название созданного вами файла. Замените его на свой и запустите скрипт.

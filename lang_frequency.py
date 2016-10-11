@@ -3,12 +3,13 @@ from collections import Counter
 import re
 
 def load_data(filepath):
-    file = open(filepath, 'r')
-    return file.read()
+    file_with_text = open(filepath, 'r')
+    return file_with_text.read()
 
 def get_most_frequent_words(text):
     text = re.findall(r'(\w+)', text.lower())
-    most_common_words_tuple = Counter(text).most_common(10)
+    number_of_words = 10
+    most_common_words_tuple = Counter(text).most_common(number_of_words)
     return [word for word,quantity in most_common_words_tuple]
 
 if __name__ == '__main__':

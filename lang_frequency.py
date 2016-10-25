@@ -6,8 +6,8 @@ import re
 def load_data(filepath):
 
     with open(filepath, 'r') as file_data:
-        file_with_text = file_data.read()
-    return file_with_text
+        data_read = file_data.read()
+    return data_read
 
 def get_most_frequent_words(text_string):
 
